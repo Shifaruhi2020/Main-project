@@ -5,3 +5,4 @@ err.log
 out.log
 package-lock.json
 /public/assets/uploads/
+.DS_Store
