@@ -1,12 +1,12 @@
- ![MNIT_Placement_Portal](./public/assets/images/github-mnit-placement-portal.png)
-> An Online Placement & Internship automation web portal for MNIT Jaipur students using MEAN Stack (Node.js, AngularJs, Express.js & MongoDb)
+ ![STANLEY_Placement_Portal](./public/assets/images/github-stanley-placement-portal.webp)
+> An Online Placement & Internship automation web portal for students using MEAN Stack (Node.js, AngularJs, Express.js & MongoDb)
 
-Training & Placement Cell, MNIT Jaipur aims at building a strong interface between industry and the University for training and placement of students. To make recruitment session smoother for students, Training & Placement Cell has a web portal for handling the placement registration for companies visiting our campus.
+Training & Placement Cell, we aim at building a strong interface between industry and the University for training and placement of students. To make recruitment session smoother for students, Training & Placement Cell has a web portal for handling the placement registration for companies visiting our campus.
 
 ## Motivation :
-The motivation for doing this project was primarily to make recruitment session smoother for students & make the complete Placement Process paperless at MNIT Jaipur. This is my small contribution, as an MNITian, to the betterment of the system of Placements in MNIT Jaipur.
+The motivation for doing this project was primarily to make recruitment session smoother for students & make the complete Placement Process paperless at Stanley. This is my small contribution, as an Stanlite, to the betterment of the system of Placements in Stanley.
 
-I am deeply thankful to T&P Authorities for approving my project to use as **Official Placement Portal - MNIT Jaipur**.
+I am deeply thankful to T&P Authorities for approving my project to use as **Official Placement Portal - STANLEY Hyderabad**.
 
 ## Tech Stack :
 * Node.Js (Server side JavaScript runtime environment)
@@ -35,11 +35,11 @@ https://docs.mongodb.com/v3.2/tutorial/install-mongodb-on-ubuntu/
 
 1. Clone Repo
 ```
-$ git clone https://github.com/Pankajtanwarbanna/PlacementMNIT.git
+$ git clone https://github.com/Shifaruhi2020/Main
 ```
 2. Change Directory
 ```
-$ cd PlacementMNIT/
+$ cd PlacementStANLEY/
 ```
 3. Install Dependencies 
 ```
@@ -56,7 +56,7 @@ Server would be running at port 8080. Open any browser. Access the project - htt
 
 ## Project Status
 
-This project is currently deployed to MNIT Cloud and being used by UG, PG, & MBA Pre-final, Final year students & Placement Cell, MNIT Jaipur.
+This project is currently deployed 
 
 <a href='http://placements.mnit.ac.in' target='_blank'>
     <img src="https://img.shields.io/badge/Project%20Status-Live-green"></a>
@@ -64,7 +64,7 @@ This project is currently deployed to MNIT Cloud and being used by UG, PG, & MBA
 
 ## Repository Structure 
    
-    PlacementMNIT/
+    PlacementSTANLEY/
     ├── app/                    # Backend Folder
     │   ├── controllers/            # All business logic for routers
     │   ├── middlewares/            # ExpressJs Middlewares
@@ -92,7 +92,6 @@ We are constantly working on towards making the placement portal more efficient 
 
 If you have a bug or idea you want to develop, you can open a new issue in this repository. We are very interested in any feedback you have about using it!
 
-If you'd like to discuss the project, development, or contributions, Join our team [Placement Community](https://gitter.im/PlacementMNIT/community) on Gitter.
 
 Pull requests are welcome. For major changes, please open a issue first to discuss what you would like to change.
 
@@ -100,38 +99,11 @@ Help improving the project from correcting a variable name to scaling the applic
 
 ## Questions or need help?
 
-We want to make it super-easy for Placement Portal users and contributors to talk to us and connect with each other, to share ideas, solve problems and help make Placement Portal awesome. Here are the main channels we're running currently, we'd love to hear from you on one of them:
+We want to make it super-easy for Placement Portal users and contributors to talk to us and connect with each other, to share ideas, solve problems and help make Placement Portal awesome. 
 
-#### Gitter
-If you want to discuss already created issues, potential bugs, new features you would like to work on or any kind of developer chat, you can head over to our [Gitter room](https://gitter.im/PlacementMNIT/community).
 
-#### Github
-If you spot a bug, then please raise an issue in [Issue Section](https://github.com/Pankajtanwarbanna/PlacementMNIT/issues), likewise if you have developed a cool new feature or improvement in your Placement MNIT fork, then send us a pull request!
 
-If you want to brainstorm a potential new feature, then the Placement Portal Gitter Room (see above) is probably a better place to start.
 
-#### linkedIn 
-
-[@Pankajtanwarbanna](https://www.linkedin.com/in/pankajtanwarbanna/)
-
-Invite me to connect on LinkedIn.
-
-#### Email 
-
-[pankajtanwar510@gmail.com](mailto:pankajtanwar510@gmail.com)
-
-If you want to talk directly to me, email is the easiest way.
-
-## Support
-
-Liked the initiative? Star the repo and show some love <3
-
-## Credits
-Pankaj Tanwar 
-
-<a href="https://github.com/pankajtanwarbanna/PlacementMNIT/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=pankajtanwarbanna/PlacementMNIT" />
-</a>
 
 ## Licence
 [MIT](https://choosealicense.com/licenses/mit/) 
