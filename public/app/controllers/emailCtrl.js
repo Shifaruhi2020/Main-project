@@ -1,5 +1,5 @@
 /*
-   Controller written by - Pankaj tanwar
+   Controller written by - Sadiyya Fayaz
 */
 
 angular.module('emailController', ['studentServices'])

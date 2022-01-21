@@ -1,0 +1,23 @@
+use placementstanley
+db.createUser(
+    {
+        user: "stanley",
+        pwd: "stanley",
+        roles: [ "dbOwner" ]
+    }
+)
+{
+    user: "stanley",
+    pwd: "stanley",
+    roles: [ "dbOwner" ]
+}
+exit
+clear
+
+openssl x509 -inform der -in LightsailDefaultKey-ap-south-1.cer -out LightsailDefaultKey-ap-south-1.cer.pem
+ssh -N -L 8888:127.0.0.1:8080 -i LightsailDefaultKey-ap-south-1.cer bitnami@3.110.148.203
+
+mongodb://stanley:stanley@127.0.0.1:27017/?authMechanism=SCRAM-SHA-1&authSource=placementstanley
+npm install
+PORT=80 node server.js
+PORT=8080 node server.js

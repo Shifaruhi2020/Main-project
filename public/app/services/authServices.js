@@ -1,5 +1,5 @@
 /*
-    Services written by - Pankaj tanwar
+    Services written by - Sadiyya Fayaz
 */
 angular.module('authServices',[])
 

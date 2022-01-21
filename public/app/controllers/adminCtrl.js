@@ -1,5 +1,5 @@
 /*
-    Controller written by - Pankaj Tanwar
+    Controller written by - Sadiyya Fayaz
 */
 angular
   .module("adminController", ["adminServices"])

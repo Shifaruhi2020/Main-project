@@ -1,5 +1,5 @@
 /*
-    Controller written by - Pankaj tanwar
+    Controller written by - Sadiyya Fayaz
 */
 angular.module('studentController',['studentServices','textAngular','fileModelDirective','uploadFileService'])
 
@@ -2046,7 +2046,7 @@ angular.module('studentController',['studentServices','textAngular','fileModelDi
                 },
                 {
                     "S.No.": "128",
-                    "Name": "Pankaj Tanwar Banna",
+                    "Name": "Sadiyya Fayaz",
                     "College ID": "2016UCP1381",
                     "Branch": "CSE",
                     "Company": "PaisaBazaar",
