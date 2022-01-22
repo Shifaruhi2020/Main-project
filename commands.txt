@@ -1,59 +1,62 @@
-Execute/Run Main-project:
-connect to aws  Lightsail terminal
-cd Main-project
-npm install
-sudo PORT=80 node server.js
-http://3.110.148.203
+HOW TO EXCECUTE/RUN ON AWS-LIGHTSAIL
+    Main-project:
+        1) connect to aws  Lightsail terminal
+        2) cd Main-project
+        3) npm install
+        4) sudo PORT=80 node server.js
+        5) http://3.110.148.203
 
 DATABASE
-1) MongoDB
-collections:
-users:
-Users(college_id, password to login)
-1) (STANLEY, stanley@123)
-"college_id" : "STANLEY",
-"password" : "stNLW"
-"college_email" : "shifarahsam@gmail.com", (To Address,feel free to change to whatever email the user want to receive emails)
-"student_name" : "Sadiyya Fayaz"
-
-2) (STANLEYADMIN, stanley@123)
-"college_id" : "STANLEYADMIN", 
-"college_email" : "shifarahsam@gmail.com", (To Address,feel free to change to whatever email the user want to receive emails)
-"student_name" : "Admin"
+    STUDIO-3T: used to connect to mongodb and view/edit data uisng GUI provided by STUDIO-3T.
+    MONGODB: (db, placementstanley)-(username, stanley)-(password, stanley)
+    SCHEMA:
+        collections:
+            users:
+                Users(college_id, password to login)
+                1) (STANLEY, stanley@123)
+                "college_id" : "STANLEY",
+                "password" : "stNLW"
+                "college_email" : "shifarahsam@gmail.com", (To Address,feel free to change to whatever email the user want to receive emails)
+                "student_name" : "Sadiyya Fayaz"
+                2) (STANLEYADMIN, stanley@123)
+                "college_id" : "STANLEYADMIN", 
+                "college_email" : "shifarahsam@gmail.com", (To Address,feel free to change to whatever email the user want to receive emails)
+                "student_name" : "Admin"
 
 AWS-SES-INTEGRATION
-CODE:
-refLink: https://nodemailer.com/transports/ses/#example-1
-checkout file app/services/mailer.service.js for email related changes.
-AWS-PORTAL:
-1) go to ses dashboard, add verified accounts
-2) create a smtp credentials
-3) go to IAM console, download smtp user credentials
-refLink: https://www.youtube.com/watch?v=HiHflLTqiwU&ab_channel=ProgramWithErik
+    CODE:
+        refLink: https://nodemailer.com/transports/ses/#example-1
+        checkout file app/services/mailer.service.js for email related changes.
+        nodemailer, a nodejs based library is used to send emails.we have configured nodemailer to use AWS-SES in the above mentioned file(mailer.service.js) 
+    AWS-PORTAL:
+        1) go to AWS-SES dashboard, add verified accounts
+        2) create a smtp credentials
+        3) go to IAM console, download smtp user credentials
+        refLink: https://www.youtube.com/watch?v=HiHflLTqiwU&ab_channel=ProgramWithErik
 
 
-AWS-LIGHTSAIL-SETUP:
-1) configure mongodb
-mongo admin --username root -p
-<enter password>
-use placementstanley
-db.createUser(
-    {
-        user: "stanley",
-        pwd: "stanley",
-        roles: [ "dbOwner" ]
-    }
-)
-exit
-clear
+AWS-LIGHTSAIL-SETUP
+    CONFIGURE MONGODB:
+        1) mongo admin --username root -p
+        2) <enter password>
+        3) use placementstanley
+        4) db.createUser(
+            {
+                user: "stanley",
+                pwd: "stanley",
+                roles: [ "dbOwner" ]
+            }
+        )
+        5) exit
+        6) clear
 
-2) SETUP Main-project(first time)
-git clone https://github.com/Shifaruhi2020/Main-project.git
-cd Main-project
-vi app/services/mongodb.service.js
-add the following change
-mongodb://stanley:stanley@127.0.0.1:27017/placementstanley?authMechanism=SCRAM-SHA-1&authSource=placementstanley
+    SETUP Main-project(first time):
 
-vi app/services/template.service.js
-add the following change for baseUrl
-http://3.110.148.203
+        1) git clone https://github.com/Shifaruhi2020/Main-project.git
+        2) cd Main-project
+        3) vi app/services/mongodb.service.js
+        4) add the following change
+        5) mongodb://stanley:stanley@127.0.0.1:27017/placementstanley?authMechanism=SCRAM-SHA-1&authSource=placementstanley
+        6) vi app/services/template.service.js
+        7) replace existing baseUrl with this http://3.110.148.203
+    
