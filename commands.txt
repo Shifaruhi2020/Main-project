@@ -5,6 +5,10 @@ npm install
 sudo PORT=80 node server.js
 http://3.110.148.203
 
+DATABASE
+1) MongoDB
+collections:
+users:
 Users(college_id, password to login)
 1) (STANLEY, stanley@123)
 "college_id" : "STANLEY",
@@ -17,7 +21,18 @@ Users(college_id, password to login)
 "college_email" : "shifarahsam@gmail.com", (To Address,feel free to change to whatever email the user want to receive emails)
 "student_name" : "Admin"
 
-AWS-Lightsail-setup:
+AWS-SES-INTEGRATION
+CODE:
+refLink: https://nodemailer.com/transports/ses/#example-1
+checkout file app/services/mailer.service.js for email related changes.
+AWS-PORTAL:
+1) go to ses dashboard, add verified accounts
+2) create a smtp credentials
+3) go to IAM console, download smtp user credentials
+refLink: https://www.youtube.com/watch?v=HiHflLTqiwU&ab_channel=ProgramWithErik
+
+
+AWS-LIGHTSAIL-SETUP:
 1) configure mongodb
 mongo admin --username root -p
 <enter password>
@@ -32,7 +47,7 @@ db.createUser(
 exit
 clear
 
-2) setup Main-project(first time)
+2) SETUP Main-project(first time)
 git clone https://github.com/Shifaruhi2020/Main-project.git
 cd Main-project
 vi app/services/mongodb.service.js
