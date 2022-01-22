@@ -6,8 +6,6 @@ Training & Placement Cell, we aim at building a strong interface between industr
 ## Motivation :
 The motivation for doing this project was primarily to make recruitment session smoother for students & make the complete Placement Process paperless at Stanley. This is my small contribution, as an Stanlite, to the betterment of the system of Placements in Stanley.
 
-I am deeply thankful to T&P Authorities for approving my project to use as **Official Placement Portal - STANLEY Hyderabad**.
-
 ## Tech Stack :
 * Node.Js (Server side JavaScript runtime environment)
 * ExpressJs (Web Application Framework for Node.Js)
@@ -56,11 +54,12 @@ Server would be running at port 8080. Open any browser. Access the project - htt
 
 ## Project Status
 
-This project is currently deployed 
+This project is currently hoated on AWS-LIGHTSAIL INSTANCE 
 
-<a href='http://placements.mnit.ac.in' target='_blank'>
+<!-- <a href='http://placements.mnit.ac.in' target='_blank'>
     <img src="https://img.shields.io/badge/Project%20Status-Live-green"></a>
 </a>
+ -->
 
 ## Repository Structure 
    
@@ -86,24 +85,6 @@ This project is currently deployed
     ├── .gitignore              # Git ignore files 
     └── server.js               # Node App start file
 
-
-## Contributing
-We are constantly working on towards making the placement portal more efficient and to speed up the overall service of Placement Portal to ensure smooth transition.
-
-If you have a bug or idea you want to develop, you can open a new issue in this repository. We are very interested in any feedback you have about using it!
-
-
-Pull requests are welcome. For major changes, please open a issue first to discuss what you would like to change.
-
-Help improving the project from correcting a variable name to scaling the application, your each contribution will be counted & get your name added in Credits!
-
-## Questions or need help?
-
-We want to make it super-easy for Placement Portal users and contributors to talk to us and connect with each other, to share ideas, solve problems and help make Placement Portal awesome. 
-
-
-
-
-
 ## Licence
-[MIT](https://choosealicense.com/licenses/mit/) 
+<!-- [MIT](https://choosealicense.com/licenses/mit/) 
+ -->
