@@ -1,5 +1,11 @@
+<!-- An Online Placement & Internship automation web portal for students using MEAN Stack (Node.js, AngularJs, Express.js & MongoDb)
+
+<p align="center" width="100%">
+    <img width="33%" src="./public/assets/images/github-stanley-placement-portal.webp">
+</p>
+ -->
  ![STANLEY_Placement_Portal](./public/assets/images/github-stanley-placement-portal.webp)
-> An Online Placement & Internship automation web portal for students using MEAN Stack (Node.js, AngularJs, Express.js & MongoDb)
+> An Online Placement & Internship automation web portal for students using MEAN Stack (Node.js, AngularJs, Express.js & MongoDb
 
 Training & Placement Cell, we aim at building a strong interface between industry and the University for training and placement of students. To make recruitment session smoother for students, Training & Placement Cell has a web portal for handling the placement registration for companies visiting our campus.
 
@@ -54,7 +60,7 @@ Server would be running at port 8080. Open any browser. Access the project - htt
 
 ## Project Status
 
-This project is currently hoated on AWS-LIGHTSAIL INSTANCE 
+This project is currently deployed on AWS-LIGHTSAIL INSTANCE 
 
 <!-- <a href='http://placements.mnit.ac.in' target='_blank'>
     <img src="https://img.shields.io/badge/Project%20Status-Live-green"></a>
