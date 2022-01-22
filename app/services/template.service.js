@@ -1,6 +1,6 @@
 const from = 'shifaruhi2022@gmail.com';
 const baseUrl = 'http://localhost:8080';
-const email_signature = '<br><br>With Regards.<br><br>Prof. Sadiyya Fayaz<br>In-charge, Training & Placement<br>Stanley Hyderabad<br>+91-141-*******';
+const email_signature = '<br><br>With Regards.<br><br>Prof. Sumayya<br>In-charge, Training & Placement<br>Stanley Hyderabad<br>+91-141-*******';
 
 exports.getEmailOpts = (data, mailType) => {
 
@@ -11,7 +11,7 @@ exports.getEmailOpts = (data, mailType) => {
                 from : from,
                 to:  data.college_email,
                 subject: 'Login Request : Placement Cell, Stanley Hyderabad',
-                text: 'Hello '+ data.student_name + 'We have received a login request for your account.Please find the below OTP to proceed further With Regards, Prof. Mahendar Choudhary',
+                text: 'Hello '+ data.student_name + 'We have received a login request for your account.Please find the below OTP to proceed further With Regards, Prof. Sumayya',
                 html: 'Hello <strong>'+ data.student_name + '</strong>,<br><br>A sign in attempt to Placement Portal requires further verification to prevent unauthorized access to your account. To complete the sign in, enter the verification code on the Placement Portal.<br><br>Verification Code: ' + data.login_otp + email_signature
             }
             break;
@@ -21,7 +21,7 @@ exports.getEmailOpts = (data, mailType) => {
                 from: from,
                 to: data.college_email,
                 subject: 'Reset Password Request : Placement Cell, Stanley Hyderabad',
-                text: 'Hello '+ data.student_name + 'You requested for the reset password.Please find the below link Reset password With Regards, Prof. Mahendar Choudhary',
+                text: 'Hello '+ data.student_name + 'You requested for the reset password.Please find the below link Reset password With Regards, Prof. Sumayya',
                 html: 'Hello <strong>'+ data.student_name + '</strong>,<br><br>You requested for the reset password. Please find the below link<br><br><a href="' + baseUrl + "/forgotPassword/" + data.temporarytoken + '">Reset password</a>'+ email_signature
             }
             break;
@@ -31,7 +31,7 @@ exports.getEmailOpts = (data, mailType) => {
                 from: from,
                 to: data.college_email,
                 subject: 'Password Updated : Placement Cell, Stanley Hyderabad',
-                text: 'Hello '+ data.student_name + 'Your password has been successfully updated.With Regards, Prof. Mahendar Choudhary',
+                text: 'Hello '+ data.student_name + 'Your password has been successfully updated.With Regards, Prof. Sumayya',
                 html: 'Hello <strong>'+ data.student_name + '</strong>,<br><br>Your password has been successfully updated.'+ email_signature
             }
             break;
@@ -41,7 +41,7 @@ exports.getEmailOpts = (data, mailType) => {
                 from: from,
                 to: data.author_id + '@mnit.ac.in',
                 subject: 'Yay! We have published your article ' + data.title,
-                text: 'Hello '+ data.author_name + 'Thanks for sharing your interview process and thoughts with us With Regards, Prof. Mahendar Choudhary',
+                text: 'Hello '+ data.author_name + 'Thanks for sharing your interview process and thoughts with us With Regards, Prof. Sumayya',
                 html: 'Hello <strong>'+ data.author_name + '</strong>,<br><br>Thanks for sharing your interview process and thoughts with us to help others. We have published your interview experience after a few modifications. We wish you luck for the future! Please find the link below -<br><br><a href="' + baseUrl + "/experience/" + data._id + '">' + data.title + ' </a>'+ email_signature
             };
             break;
@@ -51,7 +51,7 @@ exports.getEmailOpts = (data, mailType) => {
                 from: from,
                 to: data.email,
                 subject: 'Company Specific Registration: ' + data.company_name,
-                text: 'Dear Students,\nCompany Name: '+data.company_name+'\nProfile: '+data.job_profile+'\nJob Location: '+data.posting_locatioin+'\nDeadline: '+data.deadline_date+'\nWith Regards, Prof. Mahendar Choudhary',
+                text: 'Dear Students,\nCompany Name: '+data.company_name+'\nProfile: '+data.job_profile+'\nJob Location: '+data.posting_locatioin+'\nDeadline: '+data.deadline_date+'\nWith Regards, Prof. Sumayya',
                 html: 'Dear Students,<br><br><table border="1|0" style="border-collapse: collapse"><tr><td><strong>Company Name:</strong></td><td>'+data.company_name+'</td></tr><tr><td><strong>Company URL:</strong></td><td>'+data.company_website_url+'</td></tr><tr><td><strong>Organization Type:</strong></td><td>'
                 +data.organization_type+'</td></tr><tr><td><strong>Industry Sector:</strong></td><td>'+data.industry_sector+'</td></tr><tr><td><strong>About Company:</strong></td><td>'+data.about_company+'</td></tr><tr><td><strong>Profile:</strong></td><td>'+data.job_profile+'</td></tr><tr><td><strong>Passout Batch:</strong></td><td>'
                 +data.passout_batch+'</td></tr><tr><td><strong>Recruitment Type:</strong></td><td>'+data.recruitment+'</td></tr><tr><td><strong>Duration:</strong></td><td>'+data.duration+'</td></tr><tr><td><strong>Job Location:</strong></td><td>'+data.posting_location+'</td></tr><tr><td><strong>Job Description:</strong></td><td>'

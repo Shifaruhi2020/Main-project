@@ -1,3 +1,26 @@
+Execute/Run Main-project:
+connect to aws  Lightsail terminal
+cd Main-project
+npm install
+sudo PORT=80 node server.js
+http://3.110.148.203
+
+Users(college_id, password to login)
+1) (STANLEY, stanley@123)
+"college_id" : "STANLEY",
+"password" : "stNLW"
+"college_email" : "shifarahsam@gmail.com", (To Address,feel free to change to whatever email the user want to receive emails)
+"student_name" : "Sadiyya Fayaz"
+
+2) (STANLEYADMIN, stanley@123)
+"college_id" : "STANLEYADMIN", 
+"college_email" : "shifarahsam@gmail.com", (To Address,feel free to change to whatever email the user want to receive emails)
+"student_name" : "Admin"
+
+AWS-Lightsail-setup:
+1) configure mongodb
+mongo admin --username root -p
+<enter password>
 use placementstanley
 db.createUser(
     {
@@ -6,18 +29,16 @@ db.createUser(
         roles: [ "dbOwner" ]
     }
 )
-{
-    user: "stanley",
-    pwd: "stanley",
-    roles: [ "dbOwner" ]
-}
 exit
 clear
 
-openssl x509 -inform der -in LightsailDefaultKey-ap-south-1.cer -out LightsailDefaultKey-ap-south-1.cer.pem
-ssh -N -L 8888:127.0.0.1:8080 -i LightsailDefaultKey-ap-south-1.cer bitnami@3.110.148.203
+2) setup Main-project(first time)
+git clone https://github.com/Shifaruhi2020/Main-project.git
+cd Main-project
+vi app/services/mongodb.service.js
+add the following change
+mongodb://stanley:stanley@127.0.0.1:27017/placementstanley?authMechanism=SCRAM-SHA-1&authSource=placementstanley
 
-mongodb://stanley:stanley@127.0.0.1:27017/?authMechanism=SCRAM-SHA-1&authSource=placementstanley
-npm install
-PORT=80 node server.js
-PORT=8080 node server.js
+vi app/services/template.service.js
+add the following change for baseUrl
+http://3.110.148.203
