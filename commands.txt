@@ -14,14 +14,21 @@ DATABASE
             users:
                 Users(college_id, password to login)
                 1) (STANLEY, stanley@123)
-                "college_id" : "STANLEY",
-                "password" : "stNLW"
-                "college_email" : "shifarahsam@gmail.com", (To Address,feel free to change to whatever email the user want to receive emails)
-                "student_name" : "Sadiyya Fayaz"
+                {
+                    "college_id" : "STANLEY",
+                    "college_email" : "shifarahsam@gmail.com", (To Address, whichever email the user wants to receive emails)
+                    "student_name" : "Sadiyya Fayaz",
+                    "permission" : "student"
+                 }
                 2) (STANLEYADMIN, stanley@123)
-                "college_id" : "STANLEYADMIN", 
-                "college_email" : "shifarahsam@gmail.com", (To Address,feel free to change to whatever email the user want to receive emails)
-                "student_name" : "Admin"
+                {
+                    "college_id" : "STANLEYADMIN", 
+                    "college_email" : "shifarahsam@gmail.com", (To Address, whichever email the user wants to receive emails)
+                    "student_name" : "Admin"
+                    "permission" : "admin"
+                }
+    NOTE:
+        1) created 2 users one as STUDENT, the other one as ADMIN.
 
 AWS-SES-INTEGRATION
     CODE:
@@ -33,6 +40,9 @@ AWS-SES-INTEGRATION
         2) create a smtp credentials
         3) go to IAM console, download smtp user credentials
         refLink: https://www.youtube.com/watch?v=HiHflLTqiwU&ab_channel=ProgramWithErik
+    NOTE:
+        1) from email address is configured as shifarahsam@gmail.com
+        2) to email address can be any valid email address
 
 
 AWS-LIGHTSAIL-SETUP
