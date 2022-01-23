@@ -1,12 +1,31 @@
+CURRENT STATUS:
+    Overview: project is deployed to AWS-LIGHTSAIL instance, it is up and running as a DAEMON process using FOREVER nodejs library.
+    commands:
+    1) to check logs - "forever logs server.js"
+    2) to stop application - "forever stop server.js"
+    3) to start application - "forever start server.js"
+    refLink: https://docs.bitnami.com/aws/infrastructure/nodejs/administration/create-custom-application-nodejs/
+
+STES TO PERFORM TO CONFIGURE/RUN PORTAL on AWS-LIGHTSAIL:
+
 HOW TO EXCECUTE/RUN ON AWS-LIGHTSAIL
-    Main-project:
-        1) connect to aws  Lightsail terminal
+    Overview: before executing for the first time, refer the below section "SETUP Main-project(first time)" to configure project 
+    Main-project -  WITHOUT FOREVER
+        1) connect to aws Lightsail terminal
         2) cd Main-project
         3) npm install
         4) sudo PORT=80 node server.js
-        5) http://3.110.148.203
+        5) http://3.108.92.198
+    Main-project -  WITH FOREVER
+        1) connect to aws Lightsail terminal
+        2) cd Main-project
+        3) npm install
+        4) sudo forever start server.js
+        5) http://3.108.92.198
 
 DATABASE
+    NOTE:
+    1) created 2 users one as STUDENT, the other one as ADMIN.
     STUDIO-3T: used to connect to mongodb and view/edit data uisng GUI provided by STUDIO-3T.
     MONGODB: (db, placementstanley)-(username, stanley)-(password, stanley)
     SCHEMA:
@@ -27,10 +46,11 @@ DATABASE
                     "student_name" : "Admin"
                     "permission" : "admin"
                 }
-    NOTE:
-        1) created 2 users one as STUDENT, the other one as ADMIN.
 
 AWS-SES-INTEGRATION
+    NOTE:
+        1) from email address is configured as shifarahsam@gmail.com
+        2) to email address can be any valid email address
     CODE:
         refLink: https://nodemailer.com/transports/ses/#example-1
         checkout file app/services/mailer.service.js for email related changes.
@@ -40,10 +60,6 @@ AWS-SES-INTEGRATION
         2) create a smtp credentials
         3) go to IAM console, download smtp user credentials
         refLink: https://www.youtube.com/watch?v=HiHflLTqiwU&ab_channel=ProgramWithErik
-    NOTE:
-        1) from email address is configured as shifarahsam@gmail.com
-        2) to email address can be any valid email address
-
 
 AWS-LIGHTSAIL-SETUP
     CONFIGURE MONGODB:
