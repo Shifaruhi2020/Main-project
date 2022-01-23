@@ -1,9 +1,9 @@
 CURRENT STATUS:
     Overview: project is deployed to AWS-LIGHTSAIL instance, it is up and running as a DAEMON process using FOREVER nodejs library.
     commands:
-    1) to check logs - "forever logs server.js"
-    2) to stop application - "forever stop server.js"
-    3) to start application - "forever start server.js"
+    1) to check logs - " sudo forever logs server.js"
+    2) to stop application - "sudo forever stop server.js"
+    3) to start application - "sudo forever start server.js"
     refLink: https://docs.bitnami.com/aws/infrastructure/nodejs/administration/create-custom-application-nodejs/
 
 STES TO PERFORM TO CONFIGURE/RUN PORTAL on AWS-LIGHTSAIL:
